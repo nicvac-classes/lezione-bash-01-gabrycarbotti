@@ -1,0 +1,235 @@
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ ls
+README.md  REPORT.txt  esercizi  sandbox  setup.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ cd esercizi
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti/esercizi
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi (main) $ ls
+documenti  immagini  permessi  progetti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi (main) $ cd documenti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/documenti (main) $ cd report
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/documenti/report (main) $ cd 2024
+@gabrycarbotti ➜ .../esercizi/documenti/report/2024 (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti/esercizi/documenti/report/2024
+@gabrycarbotti ➜ .../esercizi/documenti/report/2024 (main) $ ls
+vendite_q1.txt
+@gabrycarbotti ➜ .../esercizi/documenti/report/2024 (main) $ cd /workspaces/lezione-bash-01-gabrycarbotti/esercizi/progetti/webapp/src
+@gabrycarbotti ➜ .../esercizi/progetti/webapp/src (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti/esercizi/progetti/webapp/src
+@gabrycarbotti ➜ .../esercizi/progetti/webapp/src (main) $ cd ../../../..
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ 
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ cd esercizi/documenti/lettere
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/documenti/lettere (main) $ cd ../../immagini/vacanze
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze (main) $ 
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze (main) $ cd ~
+@gabrycarbotti ➜ ~ $ cd -
+/workspaces/lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze (main) $ pwd
+/workspaces/lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze
+@gabrycarbotti ➜ .../lezione-bash-01-gabrycarbotti/esercizi/immagini/vacanze (main) $ 
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ mkdir test
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ ls test
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ cd test
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ mkdir alfa beta gamma
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ ls
+alfa  beta  gamma
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ mkdir livello1/livello2/livello3
+mkdir: cannot create directory ‘livello1/livello2/livello3’: No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ mkdir -p  livello1/livello2/livello3
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ tree livello1
+livello1
+└── livello2
+    └── livello3
+
+3 directories, 0 files
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ cd sandbox
+bash: cd: sandbox: No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ cd workspaces/lezione-bash-01-gabrycarbotti/sandbox
+bash: cd: workspaces/lezione-bash-01-gabrycarbotti/sandbox: No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ cd /workspaces/lezione-bash-01-gabrycarbotti/sandbox
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ mkdir -p archivio/{2022,2023,2024}/{entrate,uscite}
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ tree archivio
+archivio
+├── 2022
+│   ├── entrate
+│   └── uscite
+├── 2023
+│   ├── entrate
+│   └── uscite
+└── 2024
+    ├── entrate
+    └── uscite
+
+10 directories, 0 files
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ cd -
+/workspaces/lezione-bash-01-gabrycarbotti/test
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ rmdir alfa
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ ls alfa
+ls: cannot access 'alfa': No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ ls
+beta  gamma  livello1
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ rmdir livello1
+rmdir: failed to remove 'livello1': Directory not empty
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ rm -r livello1
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/test (main) $ cd -
+/workspaces/lezione-bash-01-gabrycarbotti/sandbox
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ mkdir -p  livello1/livello2/livello3
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ rmdir livello1
+rmdir: failed to remove 'livello1': Directory not empty
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ rm -r livello1
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ls
+archivio
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ rm -r archivio
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ rm -r test
+rm: cannot remove 'test': No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ cd ..
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ rm -r test
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ 
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ ls
+README.md  REPORT.txt  esercizi  sandbox  setup.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti (main) $ cd esercizi
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi (main) $ ls
+documenti  immagini  permessi  progetti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi (main) $ ls -l
+total 16
+drwxrwxrwx+ 4 codespace codespace 4096 Feb  2 10:59 documenti
+drwxrwxrwx+ 4 codespace codespace 4096 Feb  2 10:59 immagini
+drwxrwxrwx+ 2 codespace codespace 4096 Feb  2 10:59 permessi
+drwxrwxrwx+ 4 codespace codespace 4096 Feb  2 10:59 progetti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi (main) $ cd ~
+@gabrycarbotti ➜ ~ $ ls
+java  nvm
+@gabrycarbotti ➜ ~ $ ls -a
+.   .bash_history  .bashrc  .conda   .docker  .gitconfig  .jupyter  .maven     .nvs        .php      .python  .ruby   .vscode-remote  .zshrc  nvm
+..  .bash_logout   .cache   .config  .dotnet  .hugo       .local    .minikube  .oh-my-zsh  .profile  .rbenv   .rvmrc  .zprofile       java
+@gabrycarbotti ➜ ~ $ ls -l /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi
+total 20
+-rwxr-xr-x 1 codespace codespace 36 Feb  2 10:59 eseguibile.sh
+-rw-r--r-- 1 codespace codespace 41 Feb  2 10:59 non_eseguibile.sh
+-rw------- 1 codespace codespace 36 Feb  2 10:59 privato.txt
+-rw-r--r-- 1 codespace codespace 38 Feb  2 10:59 pubblico.txt
+---------- 1 codespace codespace 48 Feb  2 10:59 segreto.txt
+@gabrycarbotti ➜ ~ $ cd  /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ ls -l
+total 20
+-rwxr-xr-x 1 codespace codespace 36 Feb  2 10:59 eseguibile.sh
+-rw-r--r-- 1 codespace codespace 41 Feb  2 10:59 non_eseguibile.sh
+-rw------- 1 codespace codespace 36 Feb  2 10:59 privato.txt
+-rw-r--r-- 1 codespace codespace 38 Feb  2 10:59 pubblico.txt
+---------- 1 codespace codespace 48 Feb  2 10:59 segreto.txt
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cat pubblico.txt
+File pubblico - tutti possono leggere
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cat privato.txt
+File privato - solo il proprietario
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cat segreto.txt
+cat: segreto.txt: Permission denied
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ ./eseguibile.sh
+Sono eseguibile!
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ /.non_eseguibile.sh
+bash: /.non_eseguibile.sh: No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ ls -l  /workspaces/lezione-bash-01-gabrycarbotti/esercizi
+total 16
+drwxrwxrwx+ 4 codespace codespace 4096 Feb  2 10:59 documenti
+drwxrwxrwx+ 4 codespace codespace 4096 Feb  2 10:59 immagini
+drwxrwxrwx+ 2 codespace codespace 4096 Feb  2 10:59 permessi
+drwxrwxrwx+ 4 codespace codespace 4096 Feb  2 10:59 progetti
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cd -
+/home/codespace
+@gabrycarbotti ➜ ~ $ cat segreto.txt
+cat: segreto.txt: No such file or directory
+@gabrycarbotti ➜ ~ $ chmod u+r segreto.txt
+chmod: cannot access 'segreto.txt': No such file or directory
+@gabrycarbotti ➜ ~ $ cd  /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cat segreto.txt
+cat: segreto.txt: Permission denied
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ chmod u+r segreto.txt
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cat segreto.txt
+File segreto - solo lettura per il proprietario
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ chmod u+r non_eseguibile.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ ./non_eseguibile.sh
+bash: ./non_eseguibile.sh: Permission denied
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ chmod u+x non_eseguibile.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ ./non_eseguibile.sh
+Script non eseguibile
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ ls -l non_eseguibile.sh
+-rwxr--r-- 1 codespace codespace 41 Feb  2 10:59 non_eseguibile.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/esercizi/permessi (main) $ cd /workspaces/lezione-bash-01-gabrycarbotti/sandbox
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ echo '#!/bin/bash
+> echo "Ciao, sono uno script!"' > saluta.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ chmod +x saluta.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ./saluta.sh
+Ciao, sono uno script!
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ mkdir -p azienda/{amministrazione/{fatture,contratti},sviluppo{fronted,backend},risorse_umane{assunzioni,stipendi}}
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ tree azienda
+azienda
+├── amministrazione
+│   ├── contratti
+│   └── fatture
+├── risorse_umaneassunzioni
+├── risorse_umanestipendi
+├── sviluppobackend
+└── sviluppofronted
+
+8 directories, 0 files
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ mkdir -p azienda/{amministrazione/{fatture,contratti},sviluppo/{fronted
+,backend},risorse_umane/{assunzioni,stipendi}}
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ tree azienda
+azienda
+├── amministrazione
+│   ├── contratti
+│   └── fatture
+├── risorse_umane
+│   ├── assunzioni
+│   └── stipendi
+├── risorse_umaneassunzioni
+├── risorse_umanestipendi
+├── sviluppo
+│   ├── backend
+│   └── fronted
+├── sviluppobackend
+└── sviluppofronted
+
+14 directories, 0 files
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ rmdir -r  azienda
+rmdir: invalid option -- 'r'
+Try 'rmdir --help' for more information.
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ rm -r azienda
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ mkdir -p azienda/{amministrazione/{fatture,contratti},sviluppo/{fronted,backend},risorse_umane/{assunzioni,stipendi}}
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ tree azienda
+azienda
+├── amministrazione
+│   ├── contratti
+│   └── fatture
+├── risorse_umane
+│   ├── assunzioni
+│   └── stipendi
+└── sviluppo
+    ├── backend
+    └── fronted
+
+10 directories, 0 files
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ls -l esercizi/permessi
+ls: cannot access 'esercizi/permessi': No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ls -l esercizi/permessi/
+ls: cannot access 'esercizi/permessi/': No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ cd /workspaces/lezione-bash-01-gabrycarbotti/sandbox
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ cat  'EOF' > segreto.sh
+cat: EOF: No such file or directory
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ cat << 'EOF' > segreto.sh
+> echo "Hai scoperto il segreto!"
+> EOF
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ chmod u=rwx,go= segreto.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ./segreto.sh
+Hai scoperto il segreto!
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ls -l segreto.sh
+-rwx------ 1 codespace codespace 32 Feb 16 23:23 segreto.sh
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ^C
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ^C
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ^C
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ ^C
+@gabrycarbotti ➜ /workspaces/lezione-bash-01-gabrycarbotti/sandbox (main) $ 
